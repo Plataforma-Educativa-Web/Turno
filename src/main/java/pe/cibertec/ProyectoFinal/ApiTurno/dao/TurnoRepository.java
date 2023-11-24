@@ -6,6 +6,6 @@ import pe.cibertec.ProyectoFinal.ApiTurno.entity.Turno;
 
 public interface TurnoRepository extends JpaRepository<Turno, Long> {
     
-    Optional<Turno> findByNombre (String nombre);
+    Optional<Turno> findByNombreH (String nombreH);
     
 }

@@ -24,9 +24,9 @@ public class TurnoServiceImpl implements TurnoService {
     }
 
     @Override
-    public Turno findByNombre(String nombre) {
+    public Turno findByNombreH(String nombreH) {
         
-        return turnoRepository.findByNombre(nombre).orElseThrow(() -> new EntityNotFoundException("Turno no encontrada con el nombre"+nombre.toString()));
+        return turnoRepository.findByNombreH(nombreH).orElseThrow(() -> new EntityNotFoundException("Turno no encontrada con el nombre"+nombreH.toString()));
         
     }
 
@@ -47,7 +47,7 @@ public class TurnoServiceImpl implements TurnoService {
     public Turno actualizarTurno(Turno turno) {
         
         var TurnoF = turnoRepository.findById(turno.getId()).get();
-        TurnoF.setNombre(turno.getNombre());
+        TurnoF.setNombreH(turno.getNombreH());
         TurnoF.setDescripcion(turno.getDescripcion());
         
         return turnoRepository.save(TurnoF);

@@ -32,11 +32,11 @@ public class TurnoController {
         
     }
     
-    @GetMapping("/findByNombre/{nombre}")
+    @GetMapping("/findByNombre/{nombreH}")
     
-    public ResponseEntity<Turno> findByNombre(@PathVariable String nombre) {
+    public ResponseEntity<Turno> findByNombreH(@PathVariable String nombreH) {
         
-        return new ResponseEntity<>(turnoService.findByNombre(nombre), HttpStatus.OK);
+        return new ResponseEntity<>(turnoService.findByNombreH(nombreH), HttpStatus.OK);
         
     }
     

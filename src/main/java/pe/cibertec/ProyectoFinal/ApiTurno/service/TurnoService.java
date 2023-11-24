@@ -7,7 +7,7 @@ public interface TurnoService {
 
     public List<Turno> findAll();
 
-    public Turno findByNombre(String nombre);
+    public Turno findByNombreH(String nombreH);
 
     public Turno buscarPorId(Long id);
 

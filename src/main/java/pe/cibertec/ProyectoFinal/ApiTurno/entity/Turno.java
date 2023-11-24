@@ -15,7 +15,7 @@ public class Turno {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     
     private Long id;
-    private String nombre;
+    private String nombreH;
     private String descripcion;
     
 }
